@@ -30,7 +30,7 @@ app.post('/api/chat', async (req, res) => {
 
         const response = await ai.models.generateContent({
             model: GEMINI_MODEL,
-            text
+            contents
         });
 
         res.status(200).json({ result: response.text });

@@ -13,9 +13,9 @@ app.use(express.json());
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server ready on http://localhost:${PORT}`));
 
-app.get('/', (req, res) => {
+/* app.get('/', (req, res) => {
     res.status(200).send('<h1>Server Gemini Chatbot API Berjalan!</h1>');
-});
+}); */
 
 app.post('/api/chat', async (req, res) => {
     const { conversation } = req.body;
